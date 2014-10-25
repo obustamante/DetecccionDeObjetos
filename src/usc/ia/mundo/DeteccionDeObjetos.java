@@ -21,7 +21,7 @@ public class DeteccionDeObjetos {
 	//------------------------------------------------------------------------------------------
 
 	/**
-	 * @param
+	 * @param ruta del archivo de video a ser procesado
 	 */
 	public DeteccionDeObjetos(String ruta) {
 
@@ -37,6 +37,8 @@ public class DeteccionDeObjetos {
 	//------------------------------------------------------------------------------------------
 
 	/**
+	 * El punto de entrada de la solicitud, que se abre un archivo con un video que
+	 * se utilizará como referencia y se inicia la aplicación.
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -54,8 +56,8 @@ public class DeteccionDeObjetos {
 	/**
 	 * Se genera una secuencia de imagenes usando ffmpeg por linea de comando
 	 *
-	 * @param rArchivo
-	 * @return
+	 * @param rArchivo ruta del archivo a procesar
+	 * @return mensajes del Terminal
 	 */
 	private String generarSecuencia(String rArchivo) {
 
@@ -84,7 +86,7 @@ public class DeteccionDeObjetos {
 		System.out.println("\nInicio de la conversión de video a imagenes...");
 
 		// Comando para usar el terminal y generar la secuencia de imagenes a partir de un video usando ffmpeg
-		String comando = "ffmpeg -i " + rArchivo + " -f image2 " + rDestino + "img%05d.png";
+		//String comando = "ffmpeg -i " + rArchivo + " -f image2 " + rDestino + "img%05d.png";
 
 		String comandof = "ffmpeg -i " + rArchivo + " -f image2 -vf fps=fps=5 " + rDestino + "img%05d.png";
 
