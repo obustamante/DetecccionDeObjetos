@@ -2,8 +2,6 @@ package usc.ia.mundo;
 
 import usc.ia.mundo.util.ExecuteShellComand;
 
-import javax.swing.*;
-
 /**
  * Created by foxcar on 24/10/14.
  */
@@ -65,19 +63,25 @@ public class DeteccionDeObjetos {
 
 		// Limpia la carpeta de destino
 		//String clr  = "rm –Rf " + rDestino;
-		//esc.ejecutar(clr);
 
+		String clr = "rm -rf /Users/foxcar/IdeaProjects/USC/DetecccionDeObjetos/multimedia/imagen/*";
+		esc.ejecutar(clr);
+
+		/*
 		// Pregunta si se deben borrar los archivos de la papelera
-		int borrando1 = JOptionPane.showConfirmDialog(null, "Vaciar Papelera??", "Borrando", JOptionPane.YES_NO_OPTION);
+		int borrando1 = JOptionPane.showConfirmDialog(null, "Vaciar Papelera?", "Borrando", JOptionPane.YES_NO_OPTION);
 
 		// Si se vacea la papelera
 		if (borrando1 == 0) {
+			JOptionPane.showMessageDialog(null,"Vaciando papelera");
 			System.out.println("Borrando la papelera...");
-			esc.ejecutar("sudo rm -rf ~/.Trash/*");
+			esc.ejecutar("rm -rf ~/.Trash/*");
 			System.out.println("Papelera borrada");
 		}
+		*/
 
-		System.out.println("\n Inicio de la conversión de video a imagenes...");
+
+		System.out.println("\nInicio de la conversión de video a imagenes...");
 
 		// Comando para usar el terminal y generar la secuencia de imagenes a partir de un video usando ffmpeg
 		String comando = "ffmpeg -i " + rArchivo + " -f image2 " + rDestino + "img%05d.png";
@@ -85,10 +89,10 @@ public class DeteccionDeObjetos {
 		String comandof = "ffmpeg -i " + rArchivo + " -f image2 -vf fps=fps=5 " + rDestino + "img%05d.png";
 
 
-		System.out.println(esc.ejecutar(comandof));
+		String resultado = esc.ejecutar(comandof);
 		System.out.println("Fin de la conversión.\n");
 
 
-		return null;
+		return resultado;
 	}
 }
