@@ -43,7 +43,7 @@ public class DeteccionDeObjetos {
 	 */
 	public static void main(String[] args) {
 
-		DeteccionDeObjetos od = new DeteccionDeObjetos("multimedia/video/video_IA_1_SD_480P.mp4");
+		new DeteccionDeObjetos("multimedia/video/video_IA_1_SD_480P.mp4");
 		System.exit(0);
 
 	}
