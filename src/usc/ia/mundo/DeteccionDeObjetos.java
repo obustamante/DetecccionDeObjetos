@@ -12,9 +12,7 @@ public class DeteccionDeObjetos {
 	// Atributos
 	// ------------------------------------------------------------------------------------------
 
-	private String rPath = "multimedia/";
 	private String rDestino = "multimedia/imagen/";
-	private String rOrigen = "video/video_IA_1_SD_480P.mp4";
 
 	//------------------------------------------------------------------------------------------
 	// Constructor
@@ -37,8 +35,9 @@ public class DeteccionDeObjetos {
 	//------------------------------------------------------------------------------------------
 
 	/**
-	 * El punto de entrada de la solicitud, que se abre un archivo con un video que
-	 * se utilizará como referencia y se inicia la aplicación.
+	 * El punto de entrada de la solicitud, que se abre un archivo con un video que se utilizará como referencia y se
+	 * inicia la aplicación.
+	 *
 	 * @param args
 	 */
 	public static void main(String[] args) {
