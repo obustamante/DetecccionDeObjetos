@@ -3,7 +3,9 @@ package usc.ia.mundo;
 import usc.ia.mundo.util.ExecuteShellComand;
 
 /**
- * Created by foxcar on 24/10/14.
+ * @author Oscar E. Bustamante R.
+ * @version 1.1
+ * @since 24 oct 2014
  */
 public class DeteccionDeObjetos {
 
